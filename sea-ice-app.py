@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import altair as alt
+#import altair as alt
 import plotly.express as px
 #import matplotlib.pyplot as plt
 import numpy as np
