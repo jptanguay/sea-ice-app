@@ -5,8 +5,8 @@ import plotly.express as px
 #import matplotlib.pyplot as plt
 import numpy as np
 
-st.title("Ice Area by Year")
-st.header("Northern and Southern Hemisphere ")
+st.title("Ice Cover by Year")
+st.header("Northern and Southern Hemispheres")
 st.subheader("from 1978 to 2013")
 
 
@@ -25,8 +25,11 @@ df_south = df.loc[f1 & f2 & f3 & fS]
 
 col1, col2 = st.columns(2)
 with col1:
+    st.write("North")
     st.write(df_north.describe())
 with col2:    
+    st.write("South")
+  
     st.write(df_south.describe())
     
 # north 
@@ -74,6 +77,10 @@ st.markdown(header, unsafe_allow_html=True)
 pxline = px.line(dfa, x="year", y="area", title='Yearly average ice area by year')
 pxline
 
-pxline = px.line(dfe, x="year", y="extent", title='Yearly average ice extend by year')
+pxline = px.line(dfe, x="year", y="extent", title='Yearly average ice extent by year')
 pxline
   
+st.markdown("---", unsafe_allow_html=True)
+
+
+st.write("data source from  https://noaadata.apps.nsidc.org")
